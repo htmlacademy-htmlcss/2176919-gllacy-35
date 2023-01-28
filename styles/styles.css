@@ -105,8 +105,8 @@ body {
 .navigation {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px 120px;
   align-content: center;
+  justify-content: space-between;
 }
 
 .heder-menu-list {
@@ -181,6 +181,7 @@ body {
 }
 
 .navigation-link {
+  padding: 8px 16px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -1005,10 +1006,12 @@ body {
 
 .navigation-dropdown-button {
   position: relative;
+  padding: 8px 38px 8px 16px;
+  font-size: 16px;
+  line-height: 20px;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
-  padding: 8px 38px 8px 16px;
 }
 
 .navigation-dropdown-button::after {
@@ -1339,7 +1342,6 @@ body {
 }
 
 .navigation-dropdown-button:focus-within {
-  padding: 8px 38px 8px 16px;
   border-radius: 30px;
   background-color: #ff2f64;
   border-color: rgba(255, 47, 100, 0.3);
@@ -1536,3 +1538,5 @@ body {
 .heder-menu-cart:focus-within + .header-cart .header-cart-full {
   display: flex;
 }
+
+
