@@ -99,20 +99,16 @@ body {
   margin-right: 16px;
 }
 
-.header-logo {
-}
-
 .navigation {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 121px;
-  align-content: center;
+  display: flex;
+  width: 100%;
+  padding-top: 12px;
 }
 
 .heder-menu-list {
   display: flex;
-  grid-column: 1/2;
-  align-items: center;
+  min-width: 422px;
+  flex-wrap: wrap;
 }
 
 .dropdown-list {
@@ -128,9 +124,6 @@ body {
 
 .dropdown-item:not(:last-child) {
   margin-bottom: 12px;
-}
-
-.dropdown-link {
 }
 
 .header-cart-dropdown {
@@ -195,9 +188,10 @@ body {
 
 .heder-menu {
   display: flex;
-  grid-column: 2/3;
-  justify-self: flex-end;
+  flex-wrap: wrap;
+  min-width: 450px;
   align-items: flex-start;
+  margin-left: auto;
 }
 
 .contacts-style {
@@ -685,6 +679,7 @@ body {
 }
 
 .breadcrumbs-link {
+  border-radius: 20px;
   font-weight: 700;
 }
 
@@ -712,7 +707,7 @@ body {
 .select-control {
   font-family: inherit;
   padding: 8px 63px 8px 16px;
-  border: none;
+  border: solid 2px rgba(255, 255, 255, 0);
   border-radius: 20px;
   background-color: rgba(252, 252, 252, 0.3);
   -webkit-appearance: none;
@@ -785,12 +780,12 @@ body {
 
 .toggle-min {
   top: -7px;
-  left: -10px;
+  left: 24px;
 }
 
 .toggle-max {
   top: -7px;
-  right: -10px;
+  right: 52px;
 }
 
 .catalog-filter-list {
@@ -815,7 +810,7 @@ body {
   height: 16px;
   top: 0;
   left: 0;
-  border: solid 0.1em #2d3440;
+  border: solid 1.33px #2d3440;
   border-radius: 2px;
 }
 
@@ -1091,7 +1086,7 @@ body {
   left: -17px;
   width: 14px;
   height: 13px;
-  background-image: url(../images/icons/heart.svg);
+  background-image: url("../images/icons/heart.svg");
   background-repeat: no-repeat;
 }
 
@@ -1125,22 +1120,22 @@ body {
 }
 
 .advantage-item:nth-child(1) {
-  background-image: url(../images/icons/ice-cream-icon.svg);
+  background-image: url("../images/icons/ice-cream-icon.svg");
   background-repeat: no-repeat;
 }
 
 .advantage-item:nth-child(2) {
-  background-image: url(../images/icons/cow-icon.svg);
+  background-image: url("../images/icons/cow-icon.svg");
   background-repeat: no-repeat;
 }
 
 .advantage-item:nth-child(3) {
-  background-image: url(../images/icons/leaf-icon.svg);
+  background-image: url("../images/icons/leaf-icon.svg");
   background-repeat: no-repeat;
 }
 
 .advantage-item:nth-child(4) {
-  background-image: url(../images/icons/thermometer-icon.svg);
+  background-image: url("../images/icons/thermometer-icon.svg");
   background-repeat: no-repeat;
 }
 
@@ -1214,16 +1209,18 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  outline: solid 0.1em #2d3440;
+  border: solid 1.33px #2d3440;
 }
 
 .control-input-radio:checked + .control-mark-radio {
   border: solid 5px rgba(254, 175, 195, 0.3);
   background-color: #2d3440;
   background-clip: padding-box;
+  outline: solid 1.33px #2d3440;
+  outline-offset: -1.33px;
 }
 
 .control-input:checked + .control-mark {
@@ -1372,7 +1369,6 @@ body {
 .active-shape:focus-within + .login-popup {
   display: flex;
 }
-
 
 .cart-empty-content {
   text-align: center;
@@ -1557,6 +1553,7 @@ body {
   background-color: #e7e7e7;
   color: #b9b9b9;
   font-weight: 400;
+  pointer-events: none;
 }
 
 .slider-button-toggle:hover {
@@ -1662,6 +1659,7 @@ body {
 
 .main-input:disabled {
   background-color: #e7e7e7;
+  pointer-events: none;
 }
 
 .main-input-error {
@@ -1677,7 +1675,6 @@ body {
   border-color: #ea5454;
   outline: solid 1px #ea5454;
 }
-
 
 .button-special:hover {
   background-color: #fcfcfc;
@@ -1716,6 +1713,7 @@ body {
   background-color: #b9b9b9;
   color: #565c66;
   font-weight: 400;
+  pointer-events: none;
 }
 
 .form-label:not(.delivery-form-phone .form-label)::after {
@@ -1837,4 +1835,212 @@ body {
 
 .html-academy-link:active {
   opacity: 0.3;
+}
+
+.breadcrumbs-link-current {
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:focus-visible {
+  outline: solid 2px #2d3440;
+  outline-offset: 4px;
+}
+
+@supports not selector(:focus-visible) {
+.breadcrumbs-link:focus {
+  outline: solid 2px #2d3440;
+  outline-offset: 4px;
+}
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.select-control:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.select-control:focus-visible {
+  outline: none;
+  border-color: #fcfcfc;
+  background-color: rgba(252, 252, 252, 0.4);
+}
+
+@supports not selector(:focus-visible) {
+.select-control:focus {
+  outline: none;
+  border-color: #fcfcfc;
+  background-color: rgba(252, 252, 252, 0.4);
+}
+}
+
+.range-scale::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 64px;
+  height: 2px;
+  left: 40px;
+  background-color: #565c66;
+}
+
+.range-toggle:hover {
+  background: #2d3440;
+  border: solid 6px #fcfcfc;
+}
+
+.range-toggle:focus-visible {
+  background: #2d3440;
+  border: solid 6px #fcfcfc;
+  outline: solid 2px #2d3440;
+}
+
+@supports not selector(:focus-visible) {
+.range-toggle:focus {
+  background: #2d3440;
+  border: solid 6px #fcfcfc;
+  outline: solid 2px #2d3440;
+}
+}
+
+.range-toggle:active {
+  background-color: #2d3440;
+  border-color: #2d3440;
+}
+
+.control-input-radio:disabled + .control-mark-radio {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.control-input-radio:checked:disabled + .control-mark-radio {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.control-input-radio:checked:hover + .control-mark-radio {
+  background-color: #fcfcfc;
+  outline: solid 1.33px #fcfcfc;
+}
+
+.control-mark-radio:hover {
+  border: solid 1.33px #fcfcfc;
+}
+
+.control-mark:hover {
+  border-color: #fcfcfc;
+}
+
+.control-input:checked:hover + .control-mark {
+  color: #fcfcfc;
+  border-color: #fcfcfc;
+}
+
+.control-input:checked:disabled + .control-mark {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.control-input:disabled + .control-mark {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.catalog-filter-button:hover {
+  border-color: rgba(252, 252, 252, 0.3);
+  background-color: #fcfcfc;
+  background-clip: padding-box;
+}
+
+.catalog-filter-button:focus-visible {
+  background: rgba(252, 252, 252, 0.3);
+  border-color: #2d3440;
+  outline: none;
+}
+
+@supports not selector(:focus-visible) {
+.catalog-filter-button:focus {
+  background: rgba(252, 252, 252, 0.3);
+  border-color: #2d3440;
+  outline: none;
+}
+}
+
+.catalog-filter-button:active {
+  border-color: rgba(252, 252, 252, 0.5);
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.control-input-radio:checked:focus-visible + .control-mark-radio {
+  outline: solid 2px #fcfcfc;
+  background-color: #fcfcfc;
+}
+
+@supports not selector(:focus-visible) {
+.control-input-radio:checked:focus-visible + .control-mark-radio {
+  outline: solid 2px #fcfcfc;
+  background-color: #fcfcfc;
+}
+}
+
+.control-input:checked:focus-visible + .control-mark {
+  color: #fcfcfc;
+  border-color: #fcfcfc;
+}
+
+@supports not selector(:focus-visible) {
+.control-input:checked:focus + .control-mark {
+  color: #fcfcfc;
+  border-color: #fcfcfc;
+}
+}
+
+.control-input:focus-visible + .control-mark {
+  border-color: #fcfcfc;
+}
+
+@supports not selector(:focus-visible) {
+.control-input:focus + .control-mark {
+  border-color: #fcfcfc;
+}
+}
+
+.pagination-link:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.pagination-link:focus-visible {
+  outline: solid 1px #2d3440;
+  outline-offset: -1px;
+  background-color: rgba(252, 252, 252, 0.3);
+}
+
+@supports not selector(:focus-visible) {
+.pagination-link:focus {
+  outline: solid 1px #2d3440;
+  outline-offset: -1px;
+  background-color: rgba(252, 252, 252, 0.3);
+}
+}
+
+.pagination-link:active {
+  outline: solid 1px #fcfcfc;
+  outline-offset: -1px;
+}
+
+.catalog-pagination-current {
+  background-color: #fcfcfc;
+  pointer-events: none;
+}
+
+.pagination-prev:not([href]),
+.pagination-next:not([href]) {
+  opacity: 0.3;
+  pointer-events: none;
 }
