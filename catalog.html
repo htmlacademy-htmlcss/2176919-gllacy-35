@@ -18,15 +18,15 @@
           <nav class="navigation">
             <ul class="heder-menu-list list">
               <li class="heder-menu-item">
-                <div class="dropdown">
-<!--Для реализации активного/пассивного меню меняются классы navigation-dropdown-button-active/no-active-shape-->
-                  <button class="navigation-dropdown-button navigation-dropdown-button-active" type="button">Каталог</button>
+<!--Для реализации активного/пассивного меню меняются классы dropdown-active/no-active-shape-->
+                <div class="dropdown dropdown-active">
+                  <button class="navigation-dropdown-button" type="button">Каталог</button>
                   <ul class="dropdown-list list">
-                    <li class="dropdown-item dropdown-item-current">
+                    <li class="dropdown-item">
                       <a class="dropdown-link link label-style" href="#">Новинки</a>
                     </li>
-                    <li class="dropdown-item">
-                      <a class="dropdown-link link label-style" href="catalog.html">Сливочное</a>
+                    <li class="dropdown-item dropdown-item-current">
+                      <a class="dropdown-link link label-style" href="#">Сливочное</a>
                     </li>
                     <li class="dropdown-item">
                       <a class="dropdown-link link label-style" href="#">Щербеты</a>
@@ -49,9 +49,10 @@
             </ul>
             <div class="heder-menu">
               <a class="heder-contacts-phone contacts-style link no-active-shape" href="tel:+78005558628">+7 800 555-86-28</a>
-              <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-<!--               Для реализации активного/пассивного меню меняются классы active-shape/no-active-shape-->
-                <button class="search-button active-shape" type="button">
+<!--               Для реализации активного/пассивного меню меняются классы search-form-activ/no-active-shape-->
+              <form class="search-form search-form-active" action="https://echo.htmlacademy.ru/" method="post">
+
+                <button class="search-button" type="button">
                   <span class="visually-hidden">Кнопка поиска.</span>
                 </button>
                 <div class="search-wrapper">
@@ -61,9 +62,9 @@
                 </label>
                 </div>
               </form>
-              <form class="login-form" action="https://echo.htmlacademy.ru/" method="post">
-<!--               Для реализации активного/пассивного меню меняются классы active-shape/no-active-shape-->
-                <button class="heder-menu-entrance label-style active-shape" type="button">Вход</button>
+<!--               Для реализации активного/пассивного меню меняются классы login-form-active/no-active-shape-->
+              <form class="login-form login-form-active" action="https://echo.htmlacademy.ru/" method="post">
+                <button class="heder-menu-entrance label-style" type="button">Вход</button>
                 <div class="login-popup">
                   <h2 class="login-popup-title special-offer-item-title">Личный кабинет</h2>
                   <label class="login-popup-label" for="popap-email">
@@ -83,9 +84,9 @@
                   </div>
                 </div>
               </form>
-              <div class="header-cart-dropdown">
-<!--               Для реализации активного/пассивного меню меняются классы active-shape/no-active-shape-->
-                <button class="heder-menu-cart label-style active-shape" type="button">2 товара
+<!--               Для реализации активного/пассивного меню меняются классы header-cart-active/no-active-shape-->
+              <div class="header-cart-dropdown header-cart-active">
+                <button class="heder-menu-cart label-style" type="button">2 товара
                   <span class="visually-hidden">Корзина.</span>
                 </button>
 <!--   По умолчанию открывается заполненная корзина, пустая переключением классов header-cart/cart-empty-->
