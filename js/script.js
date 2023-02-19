@@ -1,4 +1,3 @@
-
 const dropdown = document.querySelector('.dropdown');
 const navigationDropdownButton = document.querySelector('.navigation-dropdown-button');
 const searchForm = document.querySelector('.search-form');
@@ -8,51 +7,37 @@ const loginButton = document.querySelector('.heder-menu-entrance');
 const headerCartDropdown = document.querySelector('.header-cart-dropdown');
 const hederMenuCart = document.querySelector('.heder-menu-cart');
 
-navigationDropdownButton.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  dropdown.classList.toggle('open-popup');
-});
-
-searchButton.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  searchForm.classList.toggle('open-popup');
-});
-
-loginButton.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  loginForm.classList.toggle('open-popup');
-});
-
-hederMenuCart.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  headerCartDropdown.classList.toggle('open-popup');
-});
-
-document.addEventListener('keydown', (evt) => {
-  if (evt.key === 'Escape') {
-    evt.preventDefault();
-    dropdown.classList.remove('open-popup');
+const hederMenu = {
+  catalog: {
+  menu: dropdown,
+  button: navigationDropdownButton,
+  },
+  search: {
+  menu: searchForm,
+  button: searchButton,
+  },
+  login: {
+  menu: loginForm,
+  button: loginButton,
+  },
+  cart: {
+  menu: headerCartDropdown,
+  button: hederMenuCart
   }
+};
+
+Object.values(hederMenu).forEach(function(element) {
+  element.button.addEventListener('click', (evt) => {
+    evt.preventDefault();
+	element.menu.classList.toggle('open-popup');
+  });
 });
 
 document.addEventListener('keydown', (evt) => {
   if (evt.key === 'Escape') {
     evt.preventDefault();
-    searchForm.classList.remove('open-popup');
-  }
-});
-
-document.addEventListener('keydown', (evt) => {
-  if (evt.key === 'Escape') {
-    evt.preventDefault();
-    loginForm.classList.remove('open-popup');
-  }
-});
-
-document.addEventListener('keydown', (evt) => {
-  if (evt.key === 'Escape') {
-    evt.preventDefault();
-    headerCartDropdown.classList.remove('open-popup');
+    const popupOpen = document.querySelector('.open-popup');
+    popupOpen.classList.remove('open-popup');
   }
 });
 

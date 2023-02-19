@@ -2,15 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Сайт">
     <title>GllacyShop. Интернет-магазин мороженого.</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon.png">
   </head>
   <body>
     <header class="main-header">
+      <h1 class="visually-hidden">Интернет-магазин «Глэйси».</h1>
       <div class="container">
         <div class="page-hader-wrapper">
           <span class="page-header-logo">
@@ -103,7 +104,7 @@
                           <a class="header-cart-link link" href="#">Малинка</a>
                           <span class="cart-quantity-selected">1 кг х 310 ₽</span>
                         </div>
-                        <span class="header-cart-price">310&nbsp;₽</span>
+                        <span class="header-cart-price cart-price">310&nbsp;₽</span>
                         <button class="cart-item-button" type="button">
                           <span class="visually-hidden">Кнопка удаления товара из корзины.</span>
                         </button>
@@ -116,7 +117,7 @@
                           <a class="header-cart-link link" href="#">Бабл&#8209;гам</a>
                           <span class="cart-quantity-selected">1,5 кг х 320 ₽</span>
                         </div>
-                        <span class="header-cart-price">480&nbsp;₽</span>
+                        <span class="header-cart-price cart-price">480&nbsp;₽</span>
                         <button class="cart-item-button" type="button">
                           <span class="visually-hidden">Кнопка удаления товара из корзины.</span>
                         </button>
@@ -138,7 +139,6 @@
       </div>
     </header>
     <main class="main-index main-container">
-      <h1 class="visually-hidden">Интернет-магазин «Глэйси».</h1>
       <section class="main-slider">
         <div class="container">
           <h2 class="visually-hidden">Фотогалерея наших новинок.</h2>
@@ -203,7 +203,7 @@
             </ul>
             <ul class="social-list list">
               <li class="social-item">
-                <a class="social-link footer-social-telegram" href="#https://t.me/htmlacademy">
+                <a class="social-link footer-social-telegram" href="https://t.me/htmlacademy">
                  <span class="visually-hidden">Глэйси в Телеграм.</span>
                 </a>
               </li>
@@ -226,12 +226,12 @@
           <div class="special-offer-wrapper">
             <h2 class="special-offer-title title">Заказывайте мороженое и&nbsp;получайте подарки!</h2>
             <ul class="special-offer-list list">
-              <li class="special-offer-item">
+              <li class="special-offer-item special-offer-raspberries">
                 <h3 class="special-offer-item-title">Малинка даром!</h3>
                 <p class="special-offer-description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
                 <button class="main-button button" type="button">Хочу подарок</button>
               </li>
-              <li class="special-offer-item">
+              <li class="special-offer-item special-offer-marshmallow">
                 <h3 class="special-offer-item-title">Маршмеллоу даром!</h3>
                 <p class="special-offer-description">При покупке 2 кг пломбира добавим в&nbsp;ваш заказ упаковку нежных зефирок&nbsp;совершенно бесплатно.</p>
                 <button class="main-button button" type="button">Хочу подарок</button>
@@ -249,44 +249,52 @@
                   <img class="product-card-image" src="images/content-images/raspberry-flavor.jpg" alt="Изображение мороженого Малинка." width="168" height="168">
                   <h3 class="product-card-title product-card-style">Малинка</h3>
                   <p class="product-card-description">Сливочное мороженое с малиновым джемом</p>
-                  <div class="price-wrapper">
-                    <span class="product-card-price product-card-style">310 ₽/кг</span>
-                    <button class="button-cart"></button>
-                  </div>
                 </a>
+                <div class="price-wrapper">
+                  <span class="product-card-price product-card-style">310 ₽/кг</span>
+                  <button class="button-cart">
+                    <span class="visually-hidden">Кнопка для добавления товара в карзину.</span>
+                  </button>
+                </div>
               </li>
               <li class="product-card">
                 <a class="product-card-link link" href="#">
                   <img class="product-card-image" src="images/content-images/pistachio-flavor.jpg" alt="Изображение мороженого Фисташка." width="168" height="168">
                   <h3 class="product-card-title product-card-style">Фисташка</h3>
                   <p class="product-card-description">Фисташковый пломбир с кусочками шоколада</p>
-                  <div class="price-wrapper">
-                    <span class="product-card-price product-card-style">340 ₽/кг</span>
-                    <button class="button-cart"></button>
-                  </div>
                 </a>
+                <div class="price-wrapper">
+                  <span class="product-card-price product-card-style">340 ₽/кг</span>
+                  <button class="button-cart">
+                    <span class="visually-hidden">Кнопка для добавления товара в карзину.</span>
+                  </button>
+                </div>
               </li>
               <li class="product-card">
                 <a class="product-card-link link" href="#">
                   <img class="product-card-image" src="images/content-images/blueberry-flavor.jpg" alt="Изображение мороженого Черника." width="168" height="168">
                   <h3 class="product-card-title product-card-style">Черника</h3>
                   <p class="product-card-price product-card-description">Крем-брюле с&nbsp;черничным джемом</p>
-                  <div class="price-wrapper">
-                    <span class="product-card-style">330 ₽/кг</span>
-                    <button class="button-cart"></button>
-                  </div>
                 </a>
+                <div class="price-wrapper">
+                  <span class="product-card-style">330 ₽/кг</span>
+                  <button class="button-cart">
+                    <span class="visually-hidden">Кнопка для добавления товара в карзину.</span>
+                  </button>
+                </div>
               </li>
               <li class="product-card">
                 <a class="product-card-link link" href="#">
                   <img class="product-card-image" src="images/content-images/bubblegum-flavor.jpg" alt="Изображение мороженого Бабл-гам." width="168" height="168">
                   <h3 class="product-card-title product-card-style">Бабл-гам</h3>
                   <p class="product-card-description">Ванильный пломбир со&nbsp;сладкой посыпкой</p>
+                </a>
                   <div class="price-wrapper">
                     <span class="product-card-price product-card-style">320 ₽/кг</span>
-                    <button class="button-cart"></button>
+                    <button class="button-cart">
+                      <span class="visually-hidden">Кнопка для добавления товара в карзину.</span>
+                    </button>
                   </div>
-                </a>
               </li>
             </ul>
         </div>
@@ -310,15 +318,17 @@
             <h2 class="visually-hidden">Новости нашего блога и подписка на их рассылку.</h2>
             <div class="blog-news">
               <h3 class="our-blog-title">Новое в нашем блоге</h3>
-              <a class="our-blog-text link" href="#">10 способов сервировки фруктовых щербетов к&nbsp;столу</a>
+              <a class="our-blog-text link interactive-shape" href="#">10 способов сервировки фруктовых щербетов к&nbsp;столу</a>
             </div>
             <div class="subscribe-wrapper">
               <div class="subscribe-section">
                 <p class="subscribe-description description">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                <span class="visually-hidden">Введите ваш емэйл.</span>
                 <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+                  <label class="visually-hidden" for="subscribe">
+                    <span class="visually-hidden">Введите ваш емэйл.</span>
+                  </label>
   <!--                  Класс для валидации инпутов main-input-error-->
-                  <input class="subscribe-input main-input" type="email" name="subscribe-email" placeholder="email@example.com" required>
+                  <input class="subscribe-input main-input" type="email" name="subscribe-email" placeholder="email@example.com" id="subscribe" required>
                   <button class="button subscribe-button button-special" type="submit">Отправить</button>
                 </form>
               </div>
@@ -337,9 +347,14 @@
               <p class="delivery-form-description">Укажите адрес и дату доставки, и мы свяжемся с&nbsp;вами, чтобы подтвердить заказ.</p>
               <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
                 <div class="delivery-form-date">
-                  <label class="form-label contacts-style" for="delivery-date">Дата
-                    <span class="tooltip-text-date tooltip-text">Укажите&nbsp;желаемую дату&nbsp;доставки</span>
-                  </label>
+                  <span class="tooltip-wrapper">
+                    <label class="form-label contacts-style" for="delivery-date">Дата</label>
+                    <span class="visually-hidden">Пояснение - что указывать в этом поле.</span>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-date"></button>
+                      <span class="tooltip-text-date tooltip-text" role="tooltip" id="tooltip-date">Укажите&nbsp;желаемую дату&nbsp;доставки</span>
+                    </span>
+                  </span>
                   <input class="delivery-input main-input" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020" required>
                 </div>
                 <div class="delivery-form-phone">
@@ -347,9 +362,14 @@
                   <input class="delivery-input main-input" type="text" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00" required>
                 </div>
                 <div class="delivery-form-address">
-                  <label class="form-label contacts-style" for="delivery-address">Адрес
-                    <span class="tooltip-text-address tooltip-text">Введите название улицы,&nbsp;дома и квартиры</span>
-                  </label>
+                  <span class="tooltip-wrapper">
+                    <label class="form-label contacts-style" for="delivery-address">Адрес</label>
+                    <span class="visually-hidden">Пояснение - что указывать в этом поле.</span>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-address"></button>
+                      <span class="tooltip-text-address tooltip-text" role="tooltip" id="tooltip-address">Введите название улицы,&nbsp;дома и квартиры</span>
+                    </span>
+                  </span>
                   <input class="delivery-input main-input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
                 </div>
                 <button class="delivery-button button button-special" type="submit">Отправить</button>
@@ -384,7 +404,7 @@
               </a>
             </li>
             <li class="social-item">
-              <a class="social-link footer-social-vk" href="https://vk.com/htmlacademyru">
+              <a class="social-link footer-social-vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Глэйси Вконтакте.</span>
               </a>
             </li>
@@ -396,24 +416,24 @@
           </ul>
           <ul class="page-footer-list list">
             <li class="page-footer-item">
-              <a class="page-footer-link emphasis link label-style" href="#">Для поставщиков</a>
+              <a class="page-footer-link emphasis link label-style interactive-shape" href="#">Для поставщиков</a>
             </li>
             <li class="page-footer-item">
-              <a class="page-footer-link link label-style" href="#">Наши документы</a>
+              <a class="page-footer-link link label-style interactive-shape" href="#">Наши документы</a>
             </li>
             <li class="page-footer-item">
-              <a class="page-footer-link link label-style" href="#">О производстве</a>
+              <a class="page-footer-link link label-style interactive-shape" href="#">О производстве</a>
             </li>
             <li class="page-footer-item">
-              <a class="page-footer-link link label-style" href="#">Экологические стандарты</a>
+              <a class="page-footer-link link label-style interactive-shape" href="#">Экологические стандарты</a>
             </li>
           </ul>
           <div class="footer-copyright">
-            <a class="html-academy-link link logo-link" href="https://htmlacademy.ru/">
+            <a class="html-academy-link link logo-link interactive-shape" href="https://htmlacademy.ru/">
               <span class="visually-hidden">Ссылка на htmlacademy.</span>
-              <img class="html-academy-logo" src="images/content-images/logo_htmlacademy.svg" alt="Логотип htmlacademy." width="93" height="28">
+              <img class="html-academy-logo" src="images/content-images/logo-htmlacademy.svg" alt="Логотип htmlacademy." width="93" height="28">
             </a>
-            <p class="footer-copyright-text">Сделано в <a class="html-academy-link" href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
+            <p class="footer-copyright-text">Сделано в <a class="html-academy-link interactive-shape" href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
           </div>
         </div>
       </div>
@@ -426,9 +446,12 @@
         <section class="modal-content">
           <h2 class="modal-title special-offer-item-title">Мы обязательно ответим вам!</h2>
           <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="modal-name-field main-input" type="text" name="first-and-last-name" placeholder="Имя и фамилия" required>
-            <input class="modal-email-field main-input" type="text" name="email" placeholder="email@example.com" required>
-            <textarea class="modal-feedback-textarea main-input" id="ordered-product" name="feedback-text" placeholder="В свободной форме" minlength="5" rows="4" required></textarea>
+            <label class="visually-hidden" for="feedback-name"> Поле для ввода имени и фамилии.</label>
+            <input class="modal-name-field main-input" type="text" name="first-and-last-name" placeholder="Имя и фамилия" id="feedback-name" required>
+            <label class="visually-hidden" for="feedback-email"> Поле для ввода адреса электронной почты.</label>
+            <input class="modal-email-field main-input" type="text" name="email" placeholder="email@example.com" id="feedback-email" required>
+            <label class="visually-hidden" for="feedback-textarea"> Поле для ввода вашего сообщения.</label>
+            <textarea class="modal-feedback-textarea main-input" id="feedback-textarea" name="feedback-text" placeholder="В свободной форме" minlength="5" rows="6" required></textarea>
             <button class="feedback-form-button button button-special" type="submit">Отправить</button>
           </form>
         </section>
