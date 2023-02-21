@@ -2207,13 +2207,7 @@ body {
   display: flex;
 }
 
-.open-popup .header-cart .header-cart-full {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.open-popup .cart-empty .header-cart-empty {
+.open-popup .cart-current {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
