@@ -2508,3 +2508,7 @@ body {
 .pagination-prev {
   margin-right: -2px;
 }
+
+.page-footer {
+  margin-top: auto;
+}
