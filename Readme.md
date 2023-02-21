@@ -1,9 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Ирина Мясникова](https://up.htmlacademy.ru/htmlcss/35/user/2176919).
-* Наставник: `Неизвестно`.
-
----
+* Наставник:[Павел Позняк](https://htmlacademy.ru/profile/id907403).
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
